@@ -17,7 +17,7 @@
 1. تحميل المشروع:
 
 ```bash
-git clone https://github.com/AbdullahAbuZaid04/VirtualR.git
+git clone https://github.com/AbdullahAbuZaid04/Dashboard-With-Sidebar.git
 ```
 
 2. تثبيت المكتبات:

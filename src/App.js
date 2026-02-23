@@ -36,7 +36,7 @@ function App() {
           <div className="flex items-center gap-3 px-6 py-5">
             <p className="bg-purple-600 w-10 h-10 flex items-center justify-center rounded-lg text-white font-bold text-xl shadow-lg">L</p>
             <h1 className="text-xl font-bold dark:text-white tracking-tight">Logo</h1>
-            {open && <X onClick={() => setOpen(!open)} className="md:hidden dark:text-white" />}
+            {open && <X aria-label="Close Menu" onClick={() => setOpen(!open)} className="md:hidden dark:text-white" />}
           </div>
 
           <div className="flex flex-col px-4 gap-2 border-y border-gray-100 dark:border-gray-700 py-6 flex-1">
@@ -49,7 +49,7 @@ function App() {
         <div className="p-4 border-t dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
           <div className="flex items-center justify-between">
             <span className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Mode</span>
-            <button onClick={() => setDarkMode(!darkMode)} className={`relative inline-flex h-7 w-14 items-center rounded-full transition-colors focus:outline-none shadow-inner ${darkMode ? "bg-purple-600" : "bg-gray-300"}`}>
+            <button aria-label="Toggle Dark Mode" onClick={() => setDarkMode(!darkMode)} className={`relative inline-flex h-7 w-14 items-center rounded-full transition-colors focus:outline-none shadow-inner ${darkMode ? "bg-purple-600" : "bg-gray-300"}`}>
               <span className={`flex items-center justify-center h-5 w-5 transform rounded-full ${darkMode ? "bg-black" : "bg-white"} shadow-md transition-transform duration-300 ${darkMode ? "translate-x-8" : "translate-x-1"}`}>
                 {darkMode ? (<Moon size={12} className="text-white" />) : (<Sun size={12} className="text-gray-600" />)}
               </span>
@@ -60,7 +60,7 @@ function App() {
 
       <div className="flex-1 h-screen overflow-y-auto">
         <div className="sticky top-0 z-10 flex justify-between items-center px-10 py-5 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b dark:border-gray-700 transition-colors">
-          {!open && <Menu className="md:hidden text-black dark:text-white" onClick={() => setOpen(!open)} />}
+          {!open && <Menu aria-label="Open Menu" className="md:hidden text-black dark:text-white" onClick={() => setOpen(!open)} />}
           <h1 className="text-2xl font-bold text-gray-800 dark:text-white">Dashboard</h1>
           <div className="flex items-center gap-4">
             <div className="bg-gray-200 dark:bg-gray-700 w-10 h-10 rounded-full border-2 border-purple-500 shadow-sm cursor-pointer"></div>
